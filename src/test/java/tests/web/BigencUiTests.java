@@ -1,52 +1,52 @@
 package tests.web;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Selenide.$x;
+import org.junit.jupiter.api.Test;
+import pages.BigencPage;
+
+
+
 import static com.codeborne.selenide.Selenide.open;
 
 public class BigencUiTests extends TestBaseUi {
 
+    BigencPage bigencPage = new BigencPage();
+
     @Test
     void BigencCheckAuthButtonTest(){
-        Selenide.open("https://bigenc.ru/");
-        $x("//div[@class='bre-header-profile']").click();
-        $x("//div[@class='bre-auth-disclaimer']").shouldHave(Condition.text("Авторизуйтесь"));
-    }
+        bigencPage
+                .openPage()
+                .clickButtonProfile()
+                .checkingText();
 
+    }
     @Test
     void StaticPageTest(){
-        open("https://bigenc.ru/");
-        $x("//a[@href='/p/about-project']").click();
-        $x("//div[@class='bre-article-layout']").shouldHave(Condition.text("О портале"));
+        bigencPage.openPage()
+                .buttonClick()
+                .searchingText();
     }
-
     @Test
     void CheckingSearchTest (){
-        open("https://bigenc.ru/");
-        $x("//nav[@class='bre-header-nav']/div[3]//input[@name='new-search']").setValue("тест")
-                .pressEnter();
-        $x("//div[@class='search-results']").shouldHave(Condition.text("тест"));
-
+       bigencPage.openPage()
+               .setInputSearch()
+               .resultPageInput();
     }
 
     @Test
     void OpenCatalogPageTest (){
-
-        open("https://bigenc.ru/");
-        $x("//div[contains(@class,'_catalog')]").click();
-        $x("//div[contains(@class,'categories-list')]/div//input").setValue("Биология").pressEnter();
-        $x("//div[contains(@class,'search-suggestions__wrapper')]//ul").click();
-        $x("//div[contains(@class,'bre-page')]").shouldHave(Condition.text("Биология"));
+        bigencPage.openPage()
+                .catalogPage()
+                .setInputCatalog()
+                .dropDownList()
+                .resultThematicPage();
     }
 
     @Test
     void CheckDisableButtonTest (){
-        open("https://bigenc.ru/");
-        $x("//div[contains(@class,'bre-form-row')][5]//button")
-                .shouldHave(Condition.not(Condition.visible));
+        open("https://bigenc.ru/p/author");
+     bigencPage.notClickButton();
+
     }
 
 }
