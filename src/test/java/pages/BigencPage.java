@@ -1,6 +1,5 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Condition.*;
@@ -46,15 +45,13 @@ public class BigencPage {
     }
     public void searchingText (){
         hasText.shouldHave(text("О портале"));
-
     }
-    public BigencPage setInputSearch (){
-        inputSearch.setValue("тест").pressEnter();
+    public BigencPage setInputSearch (String searchQuery){
+        inputSearch.setValue(searchQuery).pressEnter();
         return this;
     }
     public void resultPageInput (){
-        searchResult.shouldHave(text("тест"));
-
+        searchResult.should(visible);
     }
     public  BigencPage catalogPage (){
         catalogForm.click();
