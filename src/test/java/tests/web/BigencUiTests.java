@@ -19,7 +19,7 @@ public class BigencUiTests extends TestBaseUi {
     @DisplayName("Проверка текста на странице авторизации")
     @Tags({@Tag("Smoke"), @Tag("Web")})
     @Test
-    void BigencCheckAuthButtonTest(){
+    void CheckAuthButtonTest(){
         bigencPage
                 .openPage()
                 .clickButtonProfile()
@@ -43,13 +43,14 @@ public class BigencUiTests extends TestBaseUi {
                .setInputSearch(SearchQuery)
                .resultPageInput();
     }
+    @ValueSource(strings = {"Биология", "Физика", "Математика"})
     @DisplayName("Проверка ввода и поиска значения на странице Каталога")
     @Tags({@Tag("Smoke"), @Tag("Web")})
-    @Test
-    void OpenCatalogPageTest (){
+    @ParameterizedTest
+    void OpenCatalogPageTest (String SearchQuery){
         bigencPage.openPage()
                 .catalogPage()
-                .setInputCatalog()
+                .setInputCatalog(SearchQuery)
                 .dropDownList()
                 .resultThematicPage();
     }

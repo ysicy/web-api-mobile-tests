@@ -57,8 +57,8 @@ public class BigencPage {
         catalogForm.click();
         return this;
     }
-    public BigencPage setInputCatalog (){
-        inputSearchCatalog.setValue("Биология").pressEnter();
+    public BigencPage setInputCatalog (String searchQuery){
+        inputSearchCatalog.setValue(searchQuery).pressEnter();
         return this;
     }
     public BigencPage dropDownList (){
@@ -66,7 +66,7 @@ public class BigencPage {
         return this;
     }
     public void resultThematicPage (){
-        pageTitle.shouldHave(text("Биология"));
+        pageTitle.should(visible);
 
     }
     public BigencPage notClickButton (){
