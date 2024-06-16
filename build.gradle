@@ -3,7 +3,7 @@ plugins {
     id 'io.qameta.allure' version '2.11.2'
 }
 
-group = 'org.waineenterpraises'
+group = 'org.ru'
 version = '1.0-SNAPSHOT'
 
 allure {
@@ -26,13 +26,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'com.codeborne:selenide:6.19.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    implementation 'com.codeborne:selenide:6.19.1'
+    implementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     implementation 'io.qameta.allure:allure-selenide:2.24.0'
-    testImplementation 'junit:junit:4.13.1'
+    implementation 'junit:junit:4.13.1'
     implementation 'org.slf4j:slf4j-api:2.0.13'
 }
-
 
 
 

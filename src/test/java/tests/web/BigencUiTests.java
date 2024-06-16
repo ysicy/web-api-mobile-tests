@@ -1,6 +1,7 @@
 package tests.web;
 
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -13,13 +14,12 @@ import pages.BigencPage;
 import static com.codeborne.selenide.Selenide.open;
 
 public class BigencUiTests extends TestBaseUi {
-
     BigencPage bigencPage = new BigencPage();
-
     @DisplayName("Проверка текста на странице авторизации")
     @Tags({@Tag("Smoke"), @Tag("Web")})
     @Test
     void CheckAuthButtonTest(){
+
         bigencPage
                 .openPage()
                 .clickButtonProfile()
@@ -39,6 +39,7 @@ public class BigencUiTests extends TestBaseUi {
     @Tags({@Tag("Smoke"), @Tag("Web")})
     @ParameterizedTest
     void CheckingSearchTest (String SearchQuery){
+
        bigencPage.openPage()
                .setInputSearch(SearchQuery)
                .resultPageInput();
