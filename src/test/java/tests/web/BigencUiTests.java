@@ -36,7 +36,7 @@ public class BigencUiTests extends TestBaseUi {
     }
     @ValueSource(strings = {"Москва", "Россия", "Сочи"})
     @DisplayName("Проверка отправки значения в строку поиска")
-    @Tags({@Tag("Smoke"), @Tag("Web")})
+    @Tag("Smoke")
     @ParameterizedTest
     void CheckingSearchTest (String SearchQuery){
 
@@ -56,7 +56,7 @@ public class BigencUiTests extends TestBaseUi {
                 .resultThematicPage();
     }
     @DisplayName("Проверка невозможности отправки заявки без заполнения формы Стать автором")
-    @Tags({@Tag("Smoke"), @Tag("Web")})
+    @Tag("Web")
     @Test
     void CheckDisableButtonTest (){
         open("https://bigenc.ru/p/author");
