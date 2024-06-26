@@ -47,9 +47,8 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-test {
+task running_test (type: Test) {
     useJUnitPlatform {
-        if (project.hasProperty("Smoke")) {
-            includeTags(project.property("Smoke") as String)
-        }
-    }}
+        includeTags("API")
+    }
+}
