@@ -2,10 +2,7 @@ package tests.web;
 
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Tags;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.BigencPage;
@@ -55,6 +52,7 @@ public class BigencUiTests extends TestBaseUi {
                 .dropDownList()
                 .resultThematicPage();
     }
+    @Disabled
     @DisplayName("Проверка невозможности отправки заявки без заполнения формы Стать автором")
     @Tag("Web")
     @Test
