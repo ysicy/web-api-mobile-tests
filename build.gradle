@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.2'
+    id "io.freefair.lombok" version "8.6"
 }
 
 group = 'org.ru'
@@ -25,18 +26,21 @@ repositories {
     mavenCentral()
 }
 
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     implementation 'com.codeborne:selenide:6.19.1'
-    implementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
     implementation 'io.qameta.allure:allure-selenide:2.24.0'
     implementation 'junit:junit:4.13.1'
     implementation 'org.slf4j:slf4j-api:2.0.13'
-}
-
-
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
+    testImplementation 'io.rest-assured:rest-assured:4.5.1'
 }
 
 

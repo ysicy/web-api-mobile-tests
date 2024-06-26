@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "ui-api-tests",
+    "environment": "PROD",
+    "comment": "tests by @ysicy",
+    "reportLink": "null",
+    "language": "en",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "7360651778:AAGxs0DeTf84Qv4gzO_YXTvSi95C2zRqOp0",
+    "chat": "-1002191266777",
+    "replyTo": ""
+  }
+}
