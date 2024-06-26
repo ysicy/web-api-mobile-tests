@@ -16,7 +16,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class BigencUiTests extends TestBaseUi {
     BigencPage bigencPage = new BigencPage();
     @DisplayName("Проверка текста на странице авторизации")
-    @Tags({@Tag("Smoke"), @Tag("Web")})
+    @Tag("Smoke")
     @Test
     void CheckAuthButtonTest(){
 
@@ -27,7 +27,7 @@ public class BigencUiTests extends TestBaseUi {
 
     }
     @DisplayName("Проверка перехода на статическую страницу")
-    @Tags({@Tag("Smoke"), @Tag("Web")})
+    @Tag("Smoke")
     @Test
     void StaticPageTest(){
         bigencPage.openPage()
@@ -46,7 +46,7 @@ public class BigencUiTests extends TestBaseUi {
     }
     @ValueSource(strings = {"Биология", "Физика", "Математика"})
     @DisplayName("Проверка ввода и поиска значения на странице Каталога")
-    @Tags({@Tag("Smoke"), @Tag("Web")})
+    @Tag("Smoke")
     @ParameterizedTest
     void OpenCatalogPageTest (String SearchQuery){
         bigencPage.openPage()
@@ -56,7 +56,7 @@ public class BigencUiTests extends TestBaseUi {
                 .resultThematicPage();
     }
     @DisplayName("Проверка невозможности отправки заявки без заполнения формы Стать автором")
-    @Tag("Web")
+    @Tag("Smoke")
     @Test
     void CheckDisableButtonTest (){
         open("https://bigenc.ru/p/author");
