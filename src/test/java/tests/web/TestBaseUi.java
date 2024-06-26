@@ -2,13 +2,12 @@ package tests.web;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import io.qameta.allure.selenide.AllureSelenide;
-import java.util.Map;
+import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
+
+
 
 
 public class TestBaseUi {
@@ -19,14 +18,13 @@ public class TestBaseUi {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
+    }
+    @BeforeEach
+    void addListener() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(true)
-                .savePageSource(false)
-        );
+                        .screenshots(true)
+                .savePageSource(true));
     }
-    @AfterEach
-    void addAttachments() {
-        closeWebDriver();
-    }
+
 
 }
