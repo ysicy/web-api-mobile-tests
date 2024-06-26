@@ -53,3 +53,8 @@ task running_test (type: Test) {
         includeTags("Api")
     }
 }
+task simple_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Web")
+    }
+}
