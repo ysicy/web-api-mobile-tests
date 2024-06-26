@@ -9,13 +9,13 @@ version = '1.0-SNAPSHOT'
 
 allure {
     report {
-        version.set("2.21.0")
+        version.set("2.22.0")
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks{
             junit5{
-                adapterVersion.set("2.21.0")
+                adapterVersion.set("2.22.0")
             }
         }
     }
@@ -37,7 +37,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    testImplementation 'io.qameta.allure:allure-selenide:2.24.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.22.0'
     testImplementation 'junit:junit:4.13.1'
     implementation 'org.slf4j:slf4j-api:2.0.13'
     testImplementation 'io.rest-assured:rest-assured:4.5.1'
@@ -46,6 +46,7 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 }
 task running_test (type: Test) {
     useJUnitPlatform {
