@@ -48,8 +48,8 @@ test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
-task running_test (type: Test) {
-    useJUnitPlatform {
-        includeTags("Api","Web")
-    }
-}
+//task running_test (type: Test) {
+//    useJUnitPlatform {
+//        includeTags("Api","Web")
+//    }
+//}
