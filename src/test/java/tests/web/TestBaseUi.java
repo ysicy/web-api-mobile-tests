@@ -24,6 +24,9 @@ public class TestBaseUi {
                 .savePageSource(false)
         );
     }
-
+    @AfterEach
+    void addAttachments() {
+        closeWebDriver();
+    }
 
 }
