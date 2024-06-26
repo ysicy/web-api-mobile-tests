@@ -25,6 +25,4 @@ public class TestBaseUi {
                         .screenshots(true)
                 .savePageSource(true));
     }
-
-
 }

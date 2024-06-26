@@ -49,8 +49,7 @@ test {
     systemProperties(System.getProperties())
 }
 task running_test (type: Test) {
-
-    def jUnitPlatform = useJUnitPlatform {
+    useJUnitPlatform {
         includeTags("Web")
     }
 }
