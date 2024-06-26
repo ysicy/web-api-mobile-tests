@@ -22,14 +22,14 @@ import static org.hamcrest.Matchers.hasSize;
 
 
 public class ApiTests {
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void getAllUsersTest(){
         given().get("https://fakestoreapi.com/users")
                 .then().log().all()
                 .statusCode(200);
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void getSingleUserTest(){
         int userId = 7;
@@ -40,7 +40,7 @@ public class ApiTests {
                 .body("address.zipcode", Matchers.matchesPattern("\\d{5}-\\d{4}"))
                 .statusCode(200);
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void getAllUserWithLimit(){
 
@@ -51,7 +51,7 @@ public class ApiTests {
                 .statusCode(200)
                 .body("",hasSize(limitSize));
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void getAllUsersSortByDesc(){
         String sortType = "desc";
@@ -71,7 +71,7 @@ public class ApiTests {
         Assertions.assertNotEquals(sortedResponseIds,NotSortedResponseIds);
     }
 
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void addNewUserTest(){
         Name name = new Name("Alex", "Ecko");
@@ -97,13 +97,13 @@ public class ApiTests {
                 .body("id",notNullValue());
 
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void deleteUserTest(){
         given().delete("https://fakestoreapi.com/users/11")
                 .then().log().all();
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void authUserTest(){
         Map<String, String> userAuth = new HashMap<>();
@@ -117,7 +117,7 @@ public class ApiTests {
                 .statusCode(200)
                 .body("token",notNullValue());
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void authReqresUserTest(){
         Map<String, String> createUser = new HashMap<>();
@@ -130,7 +130,7 @@ public class ApiTests {
                 .statusCode(200)
                 .body("id", notNullValue());
     }
-    @Tag("Api")
+    @Tag("api")
     @Test
     public void unsuchReqresRegisterTest(){
         Map<String, String> createUser = new HashMap<>();
