@@ -9,13 +9,13 @@ version = '1.0-SNAPSHOT'
 
 allure {
     report {
-        version.set("2.22.0")
+        version.set("2.27.0")
     }
     adapter {
         aspectjWeaver.set(true)
         frameworks{
             junit5{
-                adapterVersion.set("2.22.0")
+                adapterVersion.set("2.27.0")
             }
         }
     }
@@ -33,14 +33,16 @@ tasks.withType(JavaCompile){
 }
 
 dependencies {
-    testImplementation 'com.codeborne:selenide:6.19.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
-    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
-    testImplementation 'io.qameta.allure:allure-selenide:2.21.0'
-    testImplementation 'junit:junit:4.13.1'
-    implementation 'org.slf4j:slf4j-api:2.0.13'
-    testImplementation 'io.rest-assured:rest-assured:4.5.1'
+    testImplementation(
+            'com.codeborne:selenide:6.19.1',
+            'org.junit.jupiter:junit-jupiter-engine:5.10.2',
+            'org.junit.jupiter:junit-jupiter:5.10.2',
+            'com.fasterxml.jackson.core:jackson-databind:2.15.2',
+            'io.qameta.allure:allure-selenide:2.27.0',
+            'junit:junit:4.13.1',
+            'org.slf4j:slf4j-api:2.0.13',
+            'io.rest-assured:rest-assured:4.5.1',
+    )
 }
 
 
@@ -50,6 +52,6 @@ test {
 }
 task running_test (type: Test) {
     useJUnitPlatform {
-        includeTags("web","api")
+        includeTags("api")
     }
 }
