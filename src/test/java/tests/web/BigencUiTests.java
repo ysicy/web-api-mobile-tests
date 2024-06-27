@@ -1,7 +1,6 @@
 package tests.web;
 
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
