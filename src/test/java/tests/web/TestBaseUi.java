@@ -16,7 +16,7 @@ public class TestBaseUi {
     @BeforeAll
     static void beforeAll(){
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize="1020x800";
+        Configuration.browserSize="1920x800";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
