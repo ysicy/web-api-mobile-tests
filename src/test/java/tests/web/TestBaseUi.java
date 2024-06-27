@@ -4,10 +4,9 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.BeforeAll;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-
-
-
+import java.util.Map;
 
 
 public class TestBaseUi {
@@ -18,6 +17,12 @@ public class TestBaseUi {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
         Configuration.holdBrowserOpen = false;
+        Configuration.remote ="https://user1:1234@Selenoid.autotests.cloud/wo/hub";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                "enableVNC", true,
+        "enableVideo", true));
+
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
                 .savePageSource(true));
