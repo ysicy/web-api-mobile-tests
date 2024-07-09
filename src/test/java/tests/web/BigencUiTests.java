@@ -1,17 +1,20 @@
 package tests.web;
 
 
+import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import pages.BigencPage;
+import tests.annotation.BrowserType;
 
 
 import static com.codeborne.selenide.Selenide.open;
 
-@Tag("web")
-public class BigencUiTests extends TestBaseUi {
+
+public class BigencUiTests  extends  TestBaseUi{
     BigencPage bigencPage = new BigencPage();
+
     @DisplayName("Проверка текста на странице авторизации")
     @Test
     void CheckAuthButtonTest(){
@@ -22,6 +25,7 @@ public class BigencUiTests extends TestBaseUi {
                 .checkingText();
 
     }
+
     @DisplayName("Проверка перехода на статическую страницу")
     @Test
     void StaticPageTest(){
@@ -29,6 +33,7 @@ public class BigencUiTests extends TestBaseUi {
                 .buttonClick()
                 .searchingText();
     }
+
     @ValueSource(strings = {"Москва", "Россия", "Сочи"})
     @DisplayName("Проверка отправки значения в строку поиска")
     @ParameterizedTest
@@ -38,6 +43,7 @@ public class BigencUiTests extends TestBaseUi {
                .setInputSearch(SearchQuery)
                .resultPageInput();
     }
+
     @ValueSource(strings = {"Биология", "Физика", "Математика"})
     @DisplayName("Проверка ввода и поиска значения на странице Каталога")
     @ParameterizedTest
@@ -48,12 +54,18 @@ public class BigencUiTests extends TestBaseUi {
                 .dropDownList()
                 .resultThematicPage();
     }
-    @Disabled
+
     @DisplayName("Проверка невозможности отправки заявки без заполнения формы Стать автором")
     @Test
+
     void CheckDisableButtonTest (){
         open("https://bigenc.ru/p/author");
      bigencPage.notClickButton();
 
+    }
+
+    @Test
+    public void TestingSelenoidTest(){
+        Selenide.open("https://vk.com/");
     }
 }

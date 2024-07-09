@@ -9,7 +9,9 @@ import static com.codeborne.selenide.Selenide.open;
 public class BigencPage {
 
     /////Elements
-    SelenideElement buttonProfile = $x("//div[@class='bre-header-profile']"),
+    SelenideElement
+
+    buttonProfile = $x("//div[@class='bre-header-profile']"),
     plashkaWithText = $x("//div[@class='bre-auth-disclaimer']"),
     aboutProjectButton = $x("//a[@href='/p/about-project']"),
     hasText = $x("//div[@class='bre-article-layout']"),
