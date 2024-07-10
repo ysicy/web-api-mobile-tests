@@ -12,7 +12,7 @@ import pages.BigencPage;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("ui")
-public class BigencUiTests{
+public class BigencUiTests  extends  TestBaseUi{
     BigencPage bigencPage = new BigencPage();
 
     @DisplayName("Проверка текста на странице авторизации")
@@ -65,7 +65,7 @@ public class BigencUiTests{
     }
 
     @Test
-    public void TestingSelenoidTest(){
+    public void TestingWithSelenoidTest(){
         Selenide.open("https://vk.com/");
     }
 }
