@@ -11,7 +11,7 @@ import pages.BigencPage;
 
 import static com.codeborne.selenide.Selenide.open;
 
-
+@Tag("ui")
 public class BigencUiTests  extends  TestBaseUi{
     BigencPage bigencPage = new BigencPage();
 
