@@ -12,7 +12,7 @@ import pages.BigencPage;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("ui")
-public class BigencUiTests  extends  SelenoidTestBase{
+public class BigencUiTests{
     BigencPage bigencPage = new BigencPage();
 
     @DisplayName("Проверка текста на странице авторизации")
