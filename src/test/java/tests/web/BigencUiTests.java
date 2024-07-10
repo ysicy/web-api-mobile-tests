@@ -2,6 +2,7 @@ package tests.web;
 
 
 import com.codeborne.selenide.Selenide;
+import org.junit.Test;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -17,7 +18,7 @@ public class BigencUiTests  extends  TestBaseUi{
 
     @DisplayName("Проверка текста на странице авторизации")
     @Test
-    void CheckAuthButtonTest(){
+    public void CheckAuthButtonTest(){
 
         bigencPage
                 .openPage()
@@ -28,7 +29,7 @@ public class BigencUiTests  extends  TestBaseUi{
 
     @DisplayName("Проверка перехода на статическую страницу")
     @Test
-    void StaticPageTest(){
+    public void StaticPageTest(){
         bigencPage.openPage()
                 .buttonClick()
                 .searchingText();
@@ -57,8 +58,7 @@ public class BigencUiTests  extends  TestBaseUi{
 
     @DisplayName("Проверка невозможности отправки заявки без заполнения формы Стать автором")
     @Test
-
-    void CheckDisableButtonTest (){
+    public void CheckDisableButtonTest (){
         open("https://bigenc.ru/p/author");
      bigencPage.notClickButton();
 
