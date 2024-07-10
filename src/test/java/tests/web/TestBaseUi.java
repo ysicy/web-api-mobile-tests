@@ -1,6 +1,8 @@
 package tests.web;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.SelenideConfig;
+import com.codeborne.selenide.SelenideDriver;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.BeforeAll;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -19,10 +21,7 @@ public class TestBaseUi {
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize="1920x1020";
         Configuration.remote = "http://localhost:4444/wd/hub";
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headles");
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
