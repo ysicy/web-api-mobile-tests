@@ -1,9 +1,9 @@
-timeout(30){
- node("windows-agent") {
- echo "Download project"
-      Checkout scm: [
-      $class: "GitSCM",
-      branches:[[name: 'main']],
+timeout(30) {
+         node("windows-agent") {
+         echo "Download project"
+      checkout scm: [
+                     $class: "GitSCM",
+                   branches:[[name: 'main']],
       userRemoteConfigs: [[
       credentialsId: 'ed5ae3ee-53b5-4361-93da-637b67c2a39f',
       url: 'git@gitlab.com:alexqa2/practictests.git'
@@ -12,7 +12,7 @@ timeout(30){
      labelledShell (label: 'Run tests', script: '''
      mkdir newfolder
      chmod +x gradlew
-     ./gradle clean myTags -x test -DcustomTags= ui_test
+     ./gradlew clean myTags -x test -DcustomTags= ui_test
      ''')
      allure([
              includeProperties: true,
@@ -20,6 +20,6 @@ timeout(30){
              properties       : [],
              reportBuildPolicy: 'ALWAYS',
              results          : [[path: 'build/allure-results']
-     ])
-  }
-}
+          ])
+    }
+    }
