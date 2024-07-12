@@ -13,8 +13,8 @@ timeout(30) {
 
      chmod +x gradlew
      ./gradlew clean ui_test
-      gradle allureReport
-      java -jar "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar
+     gradle allureReport
+     java -jar "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar
      ''')
      allure([
              includeProperties: true,
@@ -23,11 +23,6 @@ timeout(30) {
              reportBuildPolicy: 'ALWAYS',
              results          : [[path: 'build/allure-results']]
           ])
-    {
-    script {
-        def configFileContent = new File('notifications/config.json').text
-        echo configFileContent
-    }
-}
+
 }
 }
