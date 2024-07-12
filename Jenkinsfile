@@ -1,7 +1,7 @@
 timeout(30){
  node("windows-agent") {
  echo "Download project"
-      checkout scm: [
+      Checkout scm: [
       $class: "GitSCM",
       branches:[[name: 'main']],
       userRemoteConfigs: [[
