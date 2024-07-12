@@ -24,6 +24,13 @@ public class TestBaseUi {
         Configuration.browserSize="1920x1020";
         Configuration.remote = "http://localhost:4444/wd/hub";
 
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-extensions");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+
+        WebDriver driver = new ChromeDriver(options);
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
