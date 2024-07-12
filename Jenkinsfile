@@ -13,7 +13,6 @@ timeout(30) {
 
      chmod +x gradlew
      ./gradlew clean ui_test
-     java -jar "-DconfigFile=notifications/config.json" notifications/allure-notifications-4.6.1.jar
      ''')
      allure([
              includeProperties: true,
