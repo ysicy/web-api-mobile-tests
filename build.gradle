@@ -52,7 +52,7 @@ test {
 }
 task running_test (type: Test) {
     useJUnitPlatform {
-        includeTags("api")
+        includeTags("api,ui,web")
 
     }
 }
