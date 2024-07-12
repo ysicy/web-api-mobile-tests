@@ -10,7 +10,7 @@ timeout(30) {
       ]]
      ]
      labelledShell (label: 'Run tests', script: '''
-     mkdir newfolder
+
      chmod +x gradlew
      ./gradlew clean ui_test
      ''')
