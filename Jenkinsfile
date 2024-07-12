@@ -12,7 +12,7 @@ timeout(30) {
      labelledShell (label: 'Run tests', script: '''
      mkdir newfolder
      chmod +x gradlew
-     ./gradlew clean myTags -x test -DcustomTags= ui_test
+     ./gradlew clean ui_test
      ''')
      allure([
              includeProperties: true,
