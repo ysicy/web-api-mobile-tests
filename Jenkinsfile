@@ -21,9 +21,7 @@ timeout(30) {
              reportBuildPolicy: 'ALWAYS',
              results          : [[path: 'build/allure-results']]
           ])
-          {
-              sh 'java -jar "-DconfigFile=notifications/config.json" -jar notifications/allure-notifications-4.6.1.jar'
-          }
+
 
 }
 }
