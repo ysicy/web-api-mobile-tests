@@ -3,15 +3,15 @@
 **Технологии и инструменты:**
 <div align="center">
 <a href="https://www.jetbrains.com/idea/"><img alt="InteliJ IDEA" height="50" src="images/jetbrains-original.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Aerokube" height="50" src="images/aerokube_logo.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Allure" height="50" src="images/allure.png" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Gitlab" height="50" src="images/gitlab-original.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Gradle" height="50" src="images/gradle-original.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Java 17" height="50" src="images/java-original.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Jenkins" height="50" src="images/jenkins-line.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Junit" height="50" src="images/junit-original.svg" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Rest-Assured" height="50" src="images/rest-assure.png" width="50"/></a>
-<a href="https://www.jetbrains.com/idea/"><img alt="Telegram" height="50" src="images/Telegram_logo.svg" width="50"/></a>
+<a href="https://aerokube.com/"><img alt="Aerokube" height="50" src="images/aerokube_logo.svg" width="50"/></a>
+<a href="https://allurereport.org/"><img alt="Allure" height="50" src="images/allure.png" width="50"/></a>
+<a href="https://gitlab.com/"><img alt="Gitlab" height="50" src="images/gitlab-original.svg" width="50"/></a>
+<a href="https://gradle.org/"><img alt="Gradle" height="50" src="images/gradle-original.svg" width="50"/></a>
+<a href="https://www.java.com/ru/"><img alt="Java 17" height="50" src="images/java-original.svg" width="50"/></a>
+<a href="https://www.jenkins.io/"><img alt="Jenkins" height="50" src="images/jenkins-line.svg" width="50"/></a>
+<a href="https://junit.org/junit5/"><img alt="Junit" height="50" src="images/junit-original.svg" width="50"/></a>
+<a href="https://rest-assured.io/"><img alt="Rest-Assured" height="50" src="images/rest-assure.png" width="50"/></a>
+<a href="https://web.telegram.org/"><img alt="Telegram" height="50" src="images/Telegram_logo.svg" width="50"/></a>
 
 </div>
 
