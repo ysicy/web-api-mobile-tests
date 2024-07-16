@@ -10,7 +10,7 @@ import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import tests.web.SelenoidTestBase;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,7 +22,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.Matchers.hasSize;
 
 
-public class ApiTests extends SelenoidTestBase {
+public class ApiTests  {
     @Tag("api")
     @Test
     public void getAllUsersTest(){
