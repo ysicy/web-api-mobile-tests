@@ -86,10 +86,6 @@ flowchart LR
 > 
 ><img src="images/jenkinsproject.png">
 
-> К каждому Web UI-тесту в отчете прилагается видео
-<p align="center">
-  <img src="images/selenoidopen.gif">
-</p>
 
 ## Уведомления в Telegram с использованием бота
 >
