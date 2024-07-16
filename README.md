@@ -77,3 +77,23 @@ flowchart LR
 - на `windows-agent` выполняются проверки тестов по тегу `ui`  
 - Сборка собрана на основе `Jankinsfile`
 
+Для примера: выбран item для проверок UI части на `windows-agent`
+<img src="images/selenoidwork.jpg">
+
+> После завершения item выполняется скрипт отправки уведомления `Allure отчета` в `Telegram`   
+>  Так же, Allure отчет доступен локально:
+>
+> 
+><img src="images/jenkinsproject.png">
+
+> К каждому Web UI-тесту в отчете прилагается видео
+<p align="center">
+  <img src="images/selenoidopen.gif">
+</p>
+
+## Уведомления в Telegram с использованием бота
+>
+><img src="images/telega.jpg">
+
+
+
