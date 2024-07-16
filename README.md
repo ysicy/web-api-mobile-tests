@@ -79,7 +79,12 @@ flowchart LR
 
 Для примера: выбран item для проверок UI части на `windows-agent`
 <img src="images/selenoidwork.jpg">
+Пример выполнения тестов на `Selenoid`
+<p align="center">
+  <img src="images/Selenoidgif.gif">
+</p>
 
+> К каждому Web UI-тесту в отчете прилагается видео.  
 > После завершения item выполняется скрипт отправки уведомления `Allure отчета` в `Telegram`   
 >  Так же, Allure отчет доступен локально:
 >
