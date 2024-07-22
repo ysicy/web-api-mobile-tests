@@ -60,5 +60,7 @@ task ui_test (type: Test) {
     useJUnitPlatform {
         includeTags("ui")
 
+
+
     }
 }
