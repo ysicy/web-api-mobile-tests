@@ -46,10 +46,14 @@ dependencies {
 }
 
 
+
+
 test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+
+
 task running_test (type: Test) {
     useJUnitPlatform {
         includeTags("api")
@@ -59,6 +63,8 @@ task running_test (type: Test) {
 task ui_test (type: Test) {
     useJUnitPlatform {
         includeTags("ui")
+
+
 
     }
 }

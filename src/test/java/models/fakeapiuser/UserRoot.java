@@ -28,7 +28,7 @@ public class UserRoot {
 	private Name name;
 
 	@JsonProperty("id")
-	private int id;
+	private Integer id;
 
 	@JsonProperty("email")
 	private String email;
