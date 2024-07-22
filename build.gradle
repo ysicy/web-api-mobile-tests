@@ -58,6 +58,11 @@ task running_test (type: Test) {
 
     }
 }
+task running_test (type: Test) {
+    useJUnitPlatform {
+        includeTags("yupi")
+
+    }}
 task ui_test (type: Test) {
     useJUnitPlatform {
         includeTags("ui")
